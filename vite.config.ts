@@ -96,9 +96,14 @@ export default defineConfig(({ mode }) => ({
     port: 8000,
     strictPort: false,
     ...(noHmr ? { hmr: false, watch: null } : {}),
-  allowedHosts: [
-    "snap-why-fleshy.ngrok-free.dev"
-  ]
+    allowedHosts: [
+      "snap-why-fleshy.ngrok-free.dev"
+    ]
+  },
+  preview: {
+    host: "0.0.0.0",
+    port: 3000,
+    allowedHosts: true,
   },
   // es2022: src/assetBoot.ts awaits the asset map at the top level. assetsDir: the bundle must stay out of /assets/,
   // the tree the asset map sends to the asset store
